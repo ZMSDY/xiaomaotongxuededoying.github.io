@@ -13,6 +13,10 @@
   <a><img src="https://img.shields.io/badge/Powered%20by-Vue-blue"/></a>
 </p>
 
+
+ 
+
+
 `douyin-vue`パロディです`抖音|TikTok`モバイルショートビデオプロジェクト。`Vue`ネイティブと同等のモバイル側の「ベスト プラクティス」`App`シルキーで滑らかな使い心地。最新のものを使用しました`Vue`テクノロジースタック、に基づく[`Vue3`](https://cn.vuejs.org/)、[`Vite5`](https://cn.vitejs.dev/)、[`Pinia`](https://pinia.vuejs.org/)成し遂げる。データはプロジェクト内でローカルに保存されます。[`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter)ライブラリは API をインターセプトし、ローカルの JSON データを返して、実際のバックエンド リクエストをシミュレートします。
 
 <div>
