@@ -5,7 +5,8 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { Plugin as importToCDN } from 'vite-plugin-cdn-import'
 import { fileURLToPath, URL } from 'node:url'
 import { getLastCommit } from 'git-last-commit'
-import VueMacros from 'unplugin-vue-macros/vite'
+// VueMacros removed due to ESM compatibility issue with quansync/local-pkg
+// import VueMacros from 'unplugin-vue-macros/vite'
 
 const lifecycle = process.env.npm_lifecycle_event
 
@@ -21,18 +22,8 @@ export default defineConfig((): Promise<UserConfig> => {
         base: './',
         envDir: 'env',
         plugins: [
-          VueMacros({
-            plugins: {
-              vue: Vue(),
-              vueJsx: VueJsx() // if needed
-            }
-            // betterDefine: true,
-            // reactivityTransform: {
-            //   exclude: [/node_modules/, /jQuery\.js/]
-            // }
-          }),
-          // Vue(),
-          // VueJsx(),
+          Vue(),
+          VueJsx(),
           lifecycle === 'report' ? (visualizer({ open: false }) as any as PluginOption) : null,
           importToCDN({
             modules: [
